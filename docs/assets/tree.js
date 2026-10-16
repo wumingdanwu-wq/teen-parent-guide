@@ -19,6 +19,13 @@
     buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === category)));
   }
   input.addEventListener('input', update);
+  document.querySelector('#search-form')?.addEventListener('submit', event => {
+    event.preventDefault();
+    update();
+    const results = document.querySelector('#result-count');
+    results.focus({ preventScroll: true });
+    results.scrollIntoView({ block: 'nearest' });
+  });
   buttons.forEach(button => button.addEventListener('click', () => { category = button.dataset.filter; update(); }));
   document.querySelector('#reset').addEventListener('click', () => { input.value = ''; category = '全部事件'; update(); input.focus(); });
 })();
