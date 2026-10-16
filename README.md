@@ -38,3 +38,9 @@ git push -u origin main
 Markdown 来自已有 AI 学习材料，未逐条校核，其中可能存在过度概括或不适用的建议；保留原文不代表验证其准确性。风险章节不能当成危机处置流程。未包含原著 EPUB。公开前仍需核查第三方内容的分享权利。
 
 原著信息、第三方权利与授权范围见 `docs/copyright.html`。不将第三方材料标为开放许可。
+
+## 工具来源与致谢
+
+资料生成工作流来自 [apple-ouyang/book-to-skill](https://github.com/apple-ouyang/book-to-skill)，用户在 Antigravity 中使用后生成学习材料。本项目提供独立的阅读与检索界面，不代表上游官方产品。上游工具使用 MIT License；该许可不覆盖原著及译文，也不自动授予生成笔记第三方内容的再分发权。
+
+网站新增“与 AI 一起练习”：文章底部可复制提问模板，完整 Skill 资料包在 `docs/downloads/shipp-decoding-teens.zip`。本网站不调用任何 AI API。

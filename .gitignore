@@ -1,4 +1,5 @@
 *.epub
 *.zip
+!docs/downloads/*.zip
 __pycache__/
 *.pyc

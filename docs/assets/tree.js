@@ -1,6 +1,18 @@
 (() => {
   'use strict';
   document.querySelectorAll('[data-print]').forEach(button => button.addEventListener('click', () => window.print()));
+  document.querySelectorAll('[data-copy-prompt]').forEach(button => button.addEventListener('click', async () => {
+    const panel = button.closest('.practice-box');
+    const field = panel.querySelector('.ai-prompt');
+    const status = panel.querySelector('.copy-status');
+    try {
+      await navigator.clipboard.writeText(field.value);
+      status.textContent = '已复制，可以粘贴到你的 AI 对话中。';
+    } catch {
+      field.focus(); field.select();
+      status.textContent = '已选中模板，请按 Ctrl+C（Mac 按 ⌘C）复制。';
+    }
+  }));
   const input = document.querySelector('#search');
   if (!input) return;
   const cards = [...document.querySelectorAll('.event-card')];
